@@ -1,0 +1,237 @@
+
+/* Reset global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Estilo para o body */
+body {
+  background: linear-gradient(#E9DEE3 0%, #BC9EAC);
+  overflow-x: hidden;
+}
+
+/* Estilo para o header e a navegação */
+header {
+  background-color: rgba(168, 131, 149, 0.8); /* Cor com 80% de opacidade */
+  padding: 20px 60px;
+}
+
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Roboto", serif;
+  color: #1E1E1E;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.logo {
+  display: flex;
+  align-items: baseline;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  font-style: normal;
+  color: #351525;
+}
+
+.logo img {
+  height: 40px; /* Ajuste o tamanho da logo conforme necessário */
+}
+.img-home {
+  position: absolute; /* Posiciona o fundo em relação ao pai ou página */
+  top: -40px; /* Alinha ao topo */
+  right: -420px; /* Alinha à direita */
+  width: 100%; /* Faz o elemento ocupar toda a largura */
+  height: 900px; /* Altura desejada para o fundo */
+  background-image: url('./img/Img - mãos editada.svg'); /* Caminho da imagem */
+  background-repeat: no-repeat; /* Evita repetição */
+  background-size: contain; /* Ajusta o tamanho da imagem para caber no contêiner */
+  background-position: top right; /* Posiciona no canto superior direito */
+  z-index: -1; /* Coloca atrás do conteúdo */
+}
+
+
+
+/* Estilo para a lista de navegação */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 40px; /* Espaço entre os itens */
+  padding: 0;
+}
+
+.nav-links li {
+  display: inline-block;
+  position: relative;
+}
+
+/* Adicionando a linha de separação entre os itens, exceto o último */
+.nav-links li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: -10px; /* Distância entre a linha e o item */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 20px; /* Altura da linha de separação */
+  background-color: #1E1E1E; /* Cor da linha */
+}
+
+/* Estilo dos links */
+.nav-links a {
+  border-radius: 15px;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 15px;
+  color: #351525;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+  background-color: #5A233E;
+  color: #F0F0F0;
+  border-radius: 15px;
+}
+.sobre {
+  display: grid;
+  align-items: end;
+  font-family: "IBM Plex Sans", sans-serif;
+  grid-template-columns: 1fr 2fr;
+  color: #351525;
+  padding: 5rem;
+  gap: 4rem;
+}
+.sobre h1 {
+  font-size: 60px;
+}
+.sobre p{
+  font-size: 24px;
+}
+.quem-somos {
+  display: grid;
+  gap: 4rem;
+}
+.pipoca-agil {
+  margin: 0;
+  display: grid;
+  background-color: #5A233E;
+  justify-content: end;
+  font-family: "IBM Plex Sans", sans-serif;
+  color: #F0F0F0;
+  font-size: 20px;
+  padding: 2rem;
+}
+
+.time-img {
+  padding: 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  display: grid;
+  gap: 10rem;
+  background-color: #e9dee3;
+  font-family: "IBM Plex Sans", sans-serif;
+  color: #351525;
+  font-size: 60px;
+  font-weight: 300;
+  text-align: center;
+}
+.time-txt h1{
+text-align: center;
+}
+.time-txt {
+  display: grid;
+  justify-content: center;
+  text-align: start;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.time-row {
+  display: flex;
+  justify-content: center;
+  gap: 11rem;
+}
+
+.time-member {
+  text-align: center;
+}
+.time-member p {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+}
+.time-member2 p {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+}
+
+.time-member img {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
+.container-f {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  font-family: "Roboto", serif;
+  gap: 15rem;
+  justify-items: center;
+  align-items: start;
+  margin: 0 auto;
+  padding: 40px 120px;
+  background-color: #BC9EAC;
+  color: #5A233E;
+}
+
+footer h1 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+footer p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #ddd;
+  max-width: 500px;
+}
+.texto-f {
+  color: #5A233E;
+}
+
+.lista-f {
+  list-style: none;
+  padding: 0;
+}
+
+.lista-f li {
+  margin-bottom: 10px;
+}
+.redes-sociais {
+  margin-top: 3rem;
+}
+
+.social-icons {
+  margin-top: 2rem;
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s;
+
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+}
