@@ -47,7 +47,7 @@ nav {
   right: -420px; /* Alinha à direita */
   width: 100%; /* Faz o elemento ocupar toda a largura */
   height: 900px; /* Altura desejada para o fundo */
-  background-image: url('img/Img - mãos editada.svg'); /* Caminho da imagem */
+  background-image: url('/equipeazul/img/mãoeditadas.svg'); /* Caminho da imagem */
   background-repeat: no-repeat; /* Evita repetição */
   background-size: contain; /* Ajusta o tamanho da imagem para caber no contêiner */
   background-position: top right; /* Posiciona no canto superior direito */
@@ -184,51 +184,64 @@ span {
   font-size: 24px;
 }
 .map {
-  display: grid;
-  justify-content: center;
-  height: 1024px;
-  background: linear-gradient(#F0F0F0 10%, #5A233E 86%);
-}
-.map p {
-  font-family: "IBM Plex Sans", sans-serif;
   text-align: center;
-  font-size: 45px;
-  margin-top: 20px; /* Adiciona a margem superior de 20px */
-  color: #5A233E;
+  margin: 3rem 6rem;
 }
+
+.map p {
+  font-size: 1.5rem;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 45px;
+  color: #5A233E;
+  margin-bottom: 2rem;
+}
+
 .map-hover {
   position: relative;
   display: inline-block;
-  width: 100%;/* Ajuste conforme necessário */
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: background-color 0.3s ease; /* Suavização no hover */
 }
+
+.map-hover a {
+  text-decoration: none;
+  display: block;
+  position: relative;
+}
+
 .map-hover img {
   width: 100%;
   height: auto;
-  transition:0.3s ease;
+  display: block;
+  transition: filter 0.3s ease; /* Suavização no hover */
 }
 
-.map-hover h1 {
-  position: absolute;
-  top: 42%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 2rem;
-  font-family: 'IBM Plex Sans', sans-serif;
-  text-align: center;
-  opacity: 0;
-  transition: 0.3s ease;
-  pointer-events: none;
-}
 
 .map-hover:hover img {
-  opacity: 10;
-  mix-blend-mode: multiply;
+  filter: brightness(1.025) contrast(60%) sepia(0.20)
 }
 
-.map-hover:hover h1 {
-  color: #351525;
-  opacity: 1;
+/* Texto no centro no hover */
+.hover-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  color: #5A233E;
+  text-align: center;
+  opacity: 0; /* Invisível por padrão */
+  transition: opacity 0.3s ease; /* Suavização no hover */
 }
+
+.map-hover:hover .hover-text {
+  opacity: 1; /* Aparece no hover */
+}
+
 
 .section-3 {
   background-color: #5A233E;
@@ -246,15 +259,17 @@ span {
   text-decoration: none;
   text-align: center;
   color: #000000;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.section-3 a:hover {
+  background-color: #cadba7;  
 }
 .qapm {
   display: grid;
   font-family: "IBM Plex Sans", sans-serif;
   gap: 1.2rem;
   color: #F0F0F0;
-}
-.qapm:hover {
-  
 }
 .section-4 {
   background-color: #E9DEE3;
@@ -271,6 +286,7 @@ span {
   margin: 0 6rem 0 6rem;
 }
 .diagnosticos a {
+  transition: background-color 0.3s ease, transform 0.3s ease;
   text-decoration: none;
   color: #5A233E;
   border: 1px solid #5A233E;
@@ -278,26 +294,61 @@ span {
   border-radius: 9px;
   text-align: center;
 }
-.diagnosticos a:hover {
+.section-4 a:hover {
   background-color: #5A233E;
-  color: #F0F0F0;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-.diagnosticos-img img {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin-bottom: 3rem;
-}
-
-.diagnosticos-img img:hover {
-  transform: scale(1.02); /* Aumenta a imagem em 10% */
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Adiciona um efeito de sombra mais forte */
+  color: #ddd;
 }
 .diagnosticos-img {
   display: flex;
   justify-content: center;
-  gap: 5.5rem;
+  gap: 4rem;
 }
+
+.diagnostico {
+  position: relative;
+  display: inline-block;
+  transition: transform 0.5s ease;
+  margin-bottom: 3rem;
+}
+
+.diagnostico img {
+  width: 100%;
+  height: 100%;
+  transition: filter 0.5s ease;
+}
+
+.diagnostico:hover img {
+  filter: brightness(0.8) saturate(1.5) hue-rotate(-10deg);
+}
+
+/* Configuração do texto no centro */
+.diagnostico::after {
+  content: attr(data-descricao);
+  position: absolute;
+  top: 44%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #a8839595;
+  color: #351525;
+  font-family: "Roboto", serif;
+  padding: 7.03rem 10px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 400;
+  text-align: center;
+  white-space: normal; /* Permite quebra de linha */
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  width: 90%; /* Ajusta para encaixar bem no centro */
+  box-shadow: 0px 4px 6px rgba(233, 154, 154, 0.1);
+}
+
+.diagnostico:hover::after {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.05); /* Efeito suave ao aparecer */
+}
+
 .container-f {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
@@ -305,7 +356,6 @@ span {
   gap: 15rem;
   justify-items: center;
   align-items: start;
-  margin: 0 auto;
   padding: 40px 120px;
   background-color: #BC9EAC;
   color: #5A233E;
@@ -334,6 +384,9 @@ footer p {
 .lista-f li {
   margin-bottom: 10px;
 }
+.redes-sociais {
+  margin-top: 3rem;
+}
 
 .social-icons {
   display: flex;
@@ -341,8 +394,8 @@ footer p {
 }
 
 .social-icons img {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   transition: transform 0.3s;
 }
 
