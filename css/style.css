@@ -42,16 +42,19 @@ nav {
   height: 40px; /* Ajuste o tamanho da logo conforme necessário */
 }
 .img-home {
-  position: absolute; /* Posiciona o fundo em relação ao pai ou página */
-  top: -40px; /* Alinha ao topo */
-  right: -420px; /* Alinha à direita */
-  width: 100%; /* Faz o elemento ocupar toda a largura */
-  height: 900px; /* Altura desejada para o fundo */
-  background-image: url('/img/maoseditadas.svg'); /* Caminho da imagem */
-  background-repeat: no-repeat; /* Evita repetição */
-  background-size: contain; /* Ajusta o tamanho da imagem para caber no contêiner */
-  background-position: top right; /* Posiciona no canto superior direito */
-  z-index: -1; /* Coloca atrás do conteúdo */
+  position: absolute;
+  top: -40px;
+  right: -420px;
+  width: 100%;
+  height: 900px;
+  z-index: -1;
+}
+
+.img-home .img-element {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Mantém o comportamento do background-size */
+  object-position: top right; /* Equivalente ao background-position */
 }
 
 
