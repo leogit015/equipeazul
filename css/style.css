@@ -47,7 +47,7 @@ nav {
   right: -420px; /* Alinha à direita */
   width: 100%; /* Faz o elemento ocupar toda a largura */
   height: 900px; /* Altura desejada para o fundo */
-  background-image: url('img/maoseditadas.svg'); /* Caminho da imagem */
+  background-image: url('equipeazul/img/maoseditadas.svg'); /* Caminho da imagem */
   background-repeat: no-repeat; /* Evita repetição */
   background-size: contain; /* Ajusta o tamanho da imagem para caber no contêiner */
   background-position: top right; /* Posiciona no canto superior direito */
