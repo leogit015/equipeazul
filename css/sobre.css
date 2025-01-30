@@ -176,8 +176,38 @@ text-align: center;
   border-radius: 50%;
   object-fit: cover;
 }
+/* Adicionando hover do LinkedIn apenas para essa parte */
+.image-wrapper {
+    position: relative;
+    display: inline-block;
+}
 
+.image-wrapper img {
+    border-radius: 50%;
+    object-fit: cover;
+}
 
+/* Ícone do LinkedIn */
+.linkedin-link {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 150px;
+    opacity: 0; /* Esconde o ícone inicialmente */
+    transition: opacity 0.3s ease-in-out;
+}
+
+.linkedin-link img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Exibir a logo do LinkedIn no hover */
+.image-wrapper:hover .linkedin-link {
+    opacity: 1;
+}
 .container-f {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
