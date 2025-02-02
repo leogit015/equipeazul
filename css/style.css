@@ -1,0 +1,464 @@
+/* Estilo para o body */
+body {
+  background: linear-gradient(#E9DEE3 0%, #BC9EAC);
+  overflow-x: hidden;
+}
+
+/* Reset global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo para o header e a navegação */
+header {
+  background-color: #bc9eac9f;
+  padding: 20px 60px;
+}
+
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Roboto", serif;
+  color: #1E1E1E;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.logo {
+  display: flex;
+  align-items: baseline;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  font-style: normal;
+  color: #5A233E;
+}
+
+.logo img {
+  height: 45px; /* Ajuste o tamanho da logo conforme necessário */
+}
+.img-home {
+  position: absolute;
+  top: -40px;
+  right: -460px;
+  width: 100%;
+  height: 1000px;
+  z-index: -1;
+}
+
+.img-home .img-element {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Mantém o comportamento do background-size */
+  object-position: top right; /* Equivalente ao background-position */
+}
+
+
+
+/* Estilo para a lista de navegação */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem; /* Espaço entre os itens */
+  padding: 0;
+}
+
+.nav-links li {
+  display: inline-block;
+  position: relative;
+}
+
+/* Adicionando a linha de separação entre os itens, exceto o último */
+.nav-links li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: -10px; /* Distância entre a linha e o item */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 30px; /* Altura da linha de separação */
+  background-color: #1E1E1E; /* Cor da linha */
+}
+
+/* Estilo dos links */
+.nav-links a {
+  border-radius: 15px;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 15px;
+  color: #351525;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+  background-color: #5A233E;
+  color: #F0F0F0;
+  border-radius: 15px;
+}
+.section-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 1rem 3.7rem;
+
+}
+section.section-1 img {
+  max-width: 100%;
+}
+.frases {
+  display: grid;
+  gap: 8rem;
+}
+/* Estilo para os textos na section-1 */
+.frases h1 {
+  font-size: 60px;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 300;
+  margin-top: 3rem;
+}
+
+span {
+  color: #5A233E;
+  font-weight: bold;
+}
+  .frase-2 {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 24px;
+  color: #351525;
+}
+
+.txt-3 {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 50px;
+  font-weight: 300;
+  font-style: italic;
+}
+.caminho {
+  border-bottom: 3px solid #000000;
+  font-weight: 400;
+  color: #5A233E;
+}
+.saude {
+  color: #5A233E;
+  font-weight: 500;
+}
+.busque-ajuda {
+  background: linear-gradient(#deced6, #BC9EAC);
+}
+
+.tel {
+  display: flex;
+  align-items: center;
+  margin-top: 7rem;
+  text-align: center;
+  font-family: "Roboto", serif;
+  gap: 8rem;
+  list-style: none;
+}
+
+.tel-ajuda {
+  background-color: #5A233E;
+  padding: 2rem 2rem;
+  text-align: left;
+  font-size: 36px;
+  color: #F0F0F0;
+  position: relative; /* Necessário para posicionar o triângulo */
+}
+
+.tel-ajuda::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -40px; /* Ajusta para o triângulo maior */
+  transform: translateY(-50%); /* Alinha o triângulo verticalmente ao centro */
+  width: 0;
+  height: 0;
+  border-top: 75px solid transparent;  /* Aumenta o tamanho do triângulo */
+  border-bottom: 75px solid transparent; /* Aumenta o tamanho do triângulo */
+  border-left: 40px solid #5A233E; /* Aumenta a largura do triângulo */
+
+}
+.fs-1{
+  font-size: 48px;
+  font-weight: 400;
+}
+.fs-2 {
+  font-size: 24px;
+}
+.map-container {
+  background: linear-gradient(to bottom, #e6dcdd, #5A233E);
+}
+.map {
+  text-align: center;
+}
+
+.map p {
+  font-size: 1.5rem;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 45px;
+  color: #5A233E;
+  padding: 5rem;
+}
+
+.map-hover {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: background-color 0.3s ease; /* Suavização no hover */
+}
+
+.map-hover a {
+  text-decoration: none;
+  display: block;
+  position: relative;
+}
+
+.map-hover img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: filter 0.3s ease; /* Suavização no hover */
+}
+
+
+.map-hover:hover img {
+  filter: brightness(1.025) contrast(60%) sepia(0.20)
+}
+
+/* Texto no centro no hover */
+.hover-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  color: #5A233E;
+  text-align: center;
+  opacity: 0; /* Invisível por padrão */
+  transition: opacity 0.3s ease; /* Suavização no hover */
+}
+
+.map-hover:hover .hover-text {
+  opacity: 1; /* Aparece no hover */
+}
+
+
+.section-3 {
+  background-color: #5A233E;
+  display: flex;
+  justify-content: center;
+  gap: 10rem;
+  align-items: center;
+  height: 375px;
+}
+.section-3 a {
+  background-color: #F2D522;
+  padding: 10px 10px;
+  width: 8.2rem;
+  border-radius: 9px;
+  text-decoration: none;
+  text-align: center;
+  color: #000000;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.section-3 a:hover {
+  background-color: #cadba7;  
+}
+.qapm {
+  display: grid;
+  font-family: "IBM Plex Sans", sans-serif;
+  gap: 1.2rem;
+  color: #F0F0F0;
+}
+.qapmp {
+  text-align: right;
+}
+.section-4 {
+  background-color: #E9DEE3;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+.section-4 h1 {
+  font-weight: 600;
+  color: #5A233E;
+  font-size: 30px;
+}
+.diagnosticos {
+  padding: 5rem 0 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50rem;
+}
+.diagnosticos a {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
+  color: #5A233E;
+  border: 1px solid #5A233E;
+  padding: 10px 30px;
+  border-radius: 9px;
+  text-align: center;
+}
+.section-4 a:hover {
+  background-color: #5A233E;
+  color: #ddd;
+}
+.diagnosticos-img {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.diagnostico {
+  position: relative;
+  display: inline-block;
+  transition: transform 0.5s ease;
+  margin-bottom: 3rem;
+}
+
+.diagnostico img {
+  width: 100%;
+  height: 100%;
+  transition: filter 0.5s ease;
+}
+
+.diagnostico:hover img {
+  filter: brightness(0.8) saturate(1.5) hue-rotate(-10deg);
+}
+
+/* Configuração do texto no centro */
+.diagnostico::after {
+  content: attr(data-descricao);
+  position: absolute;
+  top: 44%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #a8839595;
+  color: #351525;
+  font-family: "Roboto", serif;
+  padding: 7.03rem 10px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 400;
+  text-align: center;
+  white-space: normal; /* Permite quebra de linha */
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  width: 90%; /* Ajusta para encaixar bem no centro */
+  box-shadow: 0px 4px 6px rgba(233, 154, 154, 0.1);
+}
+
+.diagnostico:hover::after {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.05); /* Efeito suave ao aparecer */
+}
+
+.container-f {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  font-family: "Roboto", serif;
+  gap: 20rem;
+  justify-items: center;
+  align-items: start;
+  padding: 60px 120px;
+  background-color: #BC9EAC;
+  color: #5A233E;
+  margin-bottom: 2rem;
+}
+
+footer h1 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+footer p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #ddd;
+  max-width: 500px;
+}
+.texto-f {
+  margin-top: 20px;
+  font-weight: 300;
+  position: absolute;
+  font-size: 17px;
+  color: #5A233E;
+}
+
+.lista-f {
+  position: absolute;
+  list-style: none;
+  font-size: 18px;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+}
+.lista-f a {
+  text-decoration: none;
+  color:#351525;
+}
+.mapa-do-site h1 {
+  margin-top: 38px;
+  font-size: 18px;
+  font-weight: 300;
+  color: #351525;
+}
+
+.lista-f li {
+  margin: 0;
+  padding: 0;
+}
+.redes-sociais {
+  margin-top: 3rem;
+ 
+}
+.redes-sociais h1 {
+  font-weight: 400;
+  color: #5A233E;
+}
+.social-icons {
+
+  margin-top: 2rem;
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .container-f {
+    grid-template-columns: 1fr; /* Ajusta para uma coluna em telas menores */
+    text-align: center;
+  }
+
+  .footer-1 {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-1 img {
+    margin-bottom: 20px;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}
