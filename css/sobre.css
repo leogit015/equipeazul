@@ -1,3 +1,8 @@
+/* Estilo para o body */
+body {
+  background: linear-gradient(#E9DEE3 0%, #BC9EAC);
+  overflow-x: hidden;
+}
 
 /* Reset global */
 * {
@@ -5,15 +10,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-/* Estilo para o body */
-body {
-  background: linear-gradient(#E9DEE3 0%, #BC9EAC);
-  overflow-x: hidden;
-}
 
-/* Estilo para o header e a navegação */
 header {
-  background-color: rgba(168, 131, 149, 0.8); /* Cor com 80% de opacidade */
+  background-color: #bc9eac9f;
   padding: 20px 60px;
 }
 
@@ -35,22 +34,26 @@ nav {
   font-size: 24px;
   font-weight: 600;
   font-style: normal;
-  color: #351525;
+  color: #5A233E;
 }
 
 .logo img {
-  height: 40px; /* Ajuste o tamanho da logo conforme necessário */
+  height: 45px; /* Ajuste o tamanho da logo conforme necessário */
 }
 .img-home {
-  position: absolute; /* Posiciona o fundo em relação ao pai ou página */
-  top: -40px; /* Alinha ao topo */
-  right: -420px; /* Alinha à direita */
-  width: 100%; /* Faz o elemento ocupar toda a largura */
-  height: 900px; /* Altura desejada para o fundo */
-  background-repeat: no-repeat; /* Evita repetição */
-  background-size: contain; /* Ajusta o tamanho da imagem para caber no contêiner */
-  background-position: top right; /* Posiciona no canto superior direito */
-  z-index: -1; /* Coloca atrás do conteúdo */
+  position: absolute;
+  top: -40px;
+  right: -470px;
+  width: 100%;
+  height: 1000px;
+  z-index: -1;
+}
+
+.img-home .img-element {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Mantém o comportamento do background-size */
+  object-position: top right; /* Equivalente ao background-position */
 }
 
 
@@ -59,7 +62,7 @@ nav {
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 40px; /* Espaço entre os itens */
+  gap: 1.5rem; /* Espaço entre os itens */
   padding: 0;
 }
 
@@ -76,7 +79,7 @@ nav {
   top: 50%;
   transform: translateY(-50%);
   width: 1px;
-  height: 20px; /* Altura da linha de separação */
+  height: 30px; /* Altura da linha de separação */
   background-color: #1E1E1E; /* Cor da linha */
 }
 
@@ -97,7 +100,10 @@ nav {
   border-radius: 15px;
 }
 .sobre {
+  position: relative;
+  background: linear-gradient(to bottom, #e6dcdd, #BC9EAC);
   display: grid;
+  place-items: right;
   align-items: end;
   font-family: "IBM Plex Sans", sans-serif;
   grid-template-columns: 1fr 2fr;
@@ -105,6 +111,11 @@ nav {
   padding: 5rem;
   gap: 4rem;
 }
+.sobre-img {
+  position: absolute;
+  top: -90px;
+}
+
 .sobre h1 {
   font-size: 60px;
 }
@@ -113,6 +124,7 @@ nav {
 }
 .quem-somos {
   display: grid;
+  grid-column: 2;
   gap: 4rem;
 }
 .pipoca-agil {
@@ -212,13 +224,13 @@ text-align: center;
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
   font-family: "Roboto", serif;
-  gap: 15rem;
+  gap: 20rem;
   justify-items: center;
   align-items: start;
-  margin: 0 auto;
-  padding: 40px 120px;
+  padding: 60px 120px;
   background-color: #BC9EAC;
   color: #5A233E;
+  margin-bottom: 2rem;
 }
 
 footer h1 {
@@ -233,22 +245,46 @@ footer p {
   max-width: 500px;
 }
 .texto-f {
+  margin-top: 20px;
+  font-weight: 300;
+  position: absolute;
+  font-size: 17px;
   color: #5A233E;
 }
 
 .lista-f {
+  position: absolute;
   list-style: none;
+  font-size: 18px;
+  text-decoration: none;
   padding: 0;
+  margin: 0;
+}
+.lista-f a {
+  text-decoration: none;
+  color:#351525;
+}
+.mapa-do-site h1 {
+  margin-top: 30px;
+  font-size: 18px;
+  font-weight: 300;
+  color: #351525;
 }
 
 .lista-f li {
-  margin-bottom: 10px;
+  margin: 0;
+  padding: 0;
 }
 .redes-sociais {
   margin-top: 3rem;
+ 
 }
-
+.redes-sociais h1 {
+  font-weight: 400;
+  color: #5A233E;
+}
 .social-icons {
+
   margin-top: 2rem;
   display: flex;
   gap: 15px;
@@ -258,7 +294,6 @@ footer p {
   width: 40px;
   height: 40px;
   transition: transform 0.3s;
-
 }
 
 .social-icons img:hover {

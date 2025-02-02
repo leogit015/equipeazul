@@ -13,7 +13,7 @@ body {
 
 /* Estilo para o header e a navegação */
 header {
-  background-color: rgba(168, 131, 149, 0.8); /* Cor com 80% de opacidade */
+  background-color: #bc9eac9f;
   padding: 20px 60px;
 }
 
@@ -35,18 +35,18 @@ nav {
   font-size: 24px;
   font-weight: 600;
   font-style: normal;
-  color: #351525;
+  color: #5A233E;
 }
 
 .logo img {
-  height: 40px; /* Ajuste o tamanho da logo conforme necessário */
+  height: 45px; /* Ajuste o tamanho da logo conforme necessário */
 }
 .img-home {
   position: absolute;
   top: -40px;
-  right: -420px;
+  right: -460px;
   width: 100%;
-  height: 900px;
+  height: 1000px;
   z-index: -1;
 }
 
@@ -63,7 +63,7 @@ nav {
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 40px; /* Espaço entre os itens */
+  gap: 1.5rem; /* Espaço entre os itens */
   padding: 0;
 }
 
@@ -80,7 +80,7 @@ nav {
   top: 50%;
   transform: translateY(-50%);
   width: 1px;
-  height: 20px; /* Altura da linha de separação */
+  height: 30px; /* Altura da linha de separação */
   background-color: #1E1E1E; /* Cor da linha */
 }
 
@@ -107,7 +107,7 @@ nav {
 
 }
 section.section-1 img {
-  max-width: 100%; /* Ajusta a imagem para o tamanho máximo */
+  max-width: 100%;
 }
 .frases {
   display: grid;
@@ -145,6 +145,9 @@ span {
 .saude {
   color: #5A233E;
   font-weight: 500;
+}
+.busque-ajuda {
+  background: linear-gradient(#deced6, #BC9EAC);
 }
 
 .tel {
@@ -186,9 +189,11 @@ span {
 .fs-2 {
   font-size: 24px;
 }
+.map-container {
+  background: linear-gradient(to bottom, #e6dcdd, #5A233E);
+}
 .map {
   text-align: center;
-  margin: 3rem 6rem;
 }
 
 .map p {
@@ -196,7 +201,7 @@ span {
   font-family: "IBM Plex Sans", sans-serif;
   font-size: 45px;
   color: #5A233E;
-  margin-bottom: 2rem;
+  padding: 5rem;
 }
 
 .map-hover {
@@ -274,19 +279,24 @@ span {
   gap: 1.2rem;
   color: #F0F0F0;
 }
+.qapmp {
+  text-align: right;
+}
 .section-4 {
   background-color: #E9DEE3;
   font-family: "IBM Plex Sans", sans-serif;
 }
 .section-4 h1 {
-  font-weight: 400;
+  font-weight: 600;
+  color: #5A233E;
+  font-size: 30px;
 }
 .diagnosticos {
+  padding: 5rem 0 0 0;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 4rem;
-  margin: 0 6rem 0 6rem;
+  justify-content: center;
+  gap: 50rem;
 }
 .diagnosticos a {
   transition: background-color 0.3s ease, transform 0.3s ease;
@@ -302,6 +312,7 @@ span {
   color: #ddd;
 }
 .diagnosticos-img {
+  margin-top: 1.5rem;
   display: flex;
   justify-content: center;
   gap: 4rem;
@@ -356,12 +367,13 @@ span {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
   font-family: "Roboto", serif;
-  gap: 15rem;
+  gap: 20rem;
   justify-items: center;
   align-items: start;
-  padding: 40px 120px;
+  padding: 60px 120px;
   background-color: #BC9EAC;
   color: #5A233E;
+  margin-bottom: 2rem;
 }
 
 footer h1 {
@@ -376,22 +388,47 @@ footer p {
   max-width: 500px;
 }
 .texto-f {
+  margin-top: 20px;
+  font-weight: 300;
+  position: absolute;
+  font-size: 17px;
   color: #5A233E;
 }
 
 .lista-f {
+  position: absolute;
   list-style: none;
+  font-size: 18px;
+  text-decoration: none;
   padding: 0;
+  margin: 0;
+}
+.lista-f a {
+  text-decoration: none;
+  color:#351525;
+}
+.mapa-do-site h1 {
+  margin-top: 38px;
+  font-size: 18px;
+  font-weight: 300;
+  color: #351525;
 }
 
 .lista-f li {
-  margin-bottom: 10px;
+  margin: 0;
+  padding: 0;
 }
 .redes-sociais {
   margin-top: 3rem;
+ 
 }
-
+.redes-sociais h1 {
+  font-weight: 400;
+  color: #5A233E;
+}
 .social-icons {
+
+  margin-top: 2rem;
   display: flex;
   gap: 15px;
 }
