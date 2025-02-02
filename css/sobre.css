@@ -220,6 +220,10 @@ text-align: center;
 .image-wrapper:hover .linkedin-link {
     opacity: 1;
 }
+.image-wrapper:hover {
+  opacity: 50%;
+
+}
 .container-f {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;

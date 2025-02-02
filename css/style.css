@@ -279,9 +279,18 @@ span {
   gap: 1.2rem;
   color: #F0F0F0;
 }
+.qapm-2 {
+  display: grid;
+  place-items: end;
+  font-family: "IBM Plex Sans", sans-serif;
+  gap: 1.2rem;
+  color: #F0F0F0;
+}
 .qapmp {
   text-align: right;
 }
+
+
 .section-4 {
   background-color: #E9DEE3;
   font-family: "IBM Plex Sans", sans-serif;
