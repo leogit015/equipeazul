@@ -344,13 +344,13 @@ span {
 .diagnostico::after {
   content: attr(data-descricao);
   position: absolute;
-  top: 43%;
+  top: 44%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #a8839595;
   color: #351525;
   font-family: "Roboto", serif;
-  padding: 111px 10px;
+  padding: 7.03rem 10px;
   text-align: center;
   font-size: 24px;
   font-weight: 400;
@@ -448,218 +448,10 @@ footer p {
   transform: scale(1.1);
 }
 
-/* Para telas maiores, de desktops convencionais */
-@media (min-width: 1024px) {
-  .container-f {
-    grid-template-columns: 3fr 1fr 1fr;
-    padding: 60px 100px;
-  }
-
-  .section-1 {
-    padding: 2rem 5rem;
-  }
-
-  .frases h1 {
-    font-size: 80px;
-  }
-
-  .frase-2 {
-    font-size: 28px;
-  }
-
-  .tel-ajuda {
-    font-size: 48px;
-    padding: 3rem;
-  }
-
-  .tel-ajuda::after {
-    border-left: 50px solid #5A233E; /* Ajuste o tamanho do triângulo para telas grandes */
-  }
-
-  .map p {
-    font-size: 50px;
-  }
-
-  .section-3 {
-    gap: 15rem; /* Mais espaço entre os elementos */
-  }
-
-  .section-4 {
-    padding: 4rem 8rem;
-  }
-
-  .diagnosticos-img {
-    gap: 6rem;
-  }
-
-  .diagnostico img {
-    width: 100%;
-    height: auto;
-  }
-
-  .map-hover {
-    max-width: 80%;
-    margin: 0 auto;
-  }
-}
-
-/* Para telas de tamanhos médios, como laptops e monitores menores */
-@media (max-width: 1024px) {
-  .section-1 {
-    padding: 1.5rem 3rem;
-  }
-
-  .frases h1 {
-    font-size: 70px;
-  }
-
-  .frase-2 {
-    font-size: 26px;
-  }
-
-  .tel-ajuda {
-    font-size: 44px;
-    padding: 2rem;
-  }
-
-  .tel-ajuda::after {
-    border-left: 45px solid #5A233E; /* Ajuste o tamanho do triângulo */
-  }
-
-  .map p {
-    font-size: 45px;
-  }
-
-  .section-3 {
-    gap: 8rem;
-  }
-
-  .diagnosticos-img {
-    gap: 5rem;
-  }
-
-  .diagnostico {
-    margin-bottom: 4rem;
-  }
-
-  .diagnostico img {
-    width: 100%;
-    height: auto;
-  }
-
-  .map-hover {
-    max-width: 90%;
-    margin: 0 auto;
-  }
-}
-
-/* Para telas menores, como laptops portáteis e telas grandes de tablet */
 @media (max-width: 768px) {
-  /* Seção de cabeçalho */
-  header {
-    padding: 20px;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    gap: 2rem;
-  }
-
-  .nav-links li:not(:last-child)::after {
-    display: none; /* Remover a linha de separação */
-  }
-
-  .section-1 {
-    display: block;
-    padding: 1rem;
-  }
-
-  .frases h1 {
-    font-size: 60px;
-  }
-
-  .frase-2 {
-    font-size: 24px;
-  }
-
-  .tel-ajuda {
-    font-size: 38px;
-    padding: 1.5rem;
-  }
-
-  .tel-ajuda::after {
-    border-left: 35px solid #5A233E; /* Ajuste o tamanho do triângulo */
-  }
-
-  .map p {
-    font-size: 40px;
-  }
-
-  .section-3 {
-    flex-direction: column;
-    gap: 5rem;
-  }
-
-  .diagnosticos-img {
-    gap: 4rem;
-  }
-
-  .diagnostico img {
-    width: 100%;
-    height: auto;
-  }
-
-  .map-hover {
-    max-width: 100%;
-    margin: 0 auto;
-  }
-}
-
-/* Ajustes para telas de smartphones (480px e abaixo) */
-@media (max-width: 480px) {
-  .section-1 {
-    padding: 1rem;
-  }
-
-  .frases h1 {
-    font-size: 45px;
-  }
-
-  .frase-2 {
-    font-size: 20px;
-  }
-
-  .tel-ajuda {
-    font-size: 32px;
-    padding: 1rem;
-  }
-
-  .tel-ajuda::after {
-    border-left: 30px solid #5A233E; /* Ajuste o tamanho do triângulo */
-  }
-
-  .map p {
-    font-size: 35px;
-  }
-
-  .section-3 {
-    flex-direction: column;
-    gap: 4rem;
-    padding: 2rem;
-  }
-
-  .diagnosticos-img {
-    gap: 3rem;
-  }
-
-  .diagnostico img {
-    width: 100%;
-    height: auto;
-  }
-
-  .map-hover {
-    max-width: 100%;
-    margin: 0 auto;
+  .container-f {
+    grid-template-columns: 1fr; /* Ajusta para uma coluna em telas menores */
+    text-align: center;
   }
 
   .footer-1 {
