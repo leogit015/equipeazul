@@ -229,7 +229,6 @@ nav {
   object-fit: cover;
 }
 
-/* Sobreposição rosa */
 .image-wrapper::after {
   content: "";
   position: absolute;
@@ -237,15 +236,17 @@ nav {
   left: 0;
   width: 100%;
   height: 95%;
-  background-color: #bc9eac9d; /* Rosa com transparência */
-  opacity: 0; /* Inicialmente invisível */
-  transition: opacity 0.3s ease-in-out; /* Transição suave */
-  border-radius: 55%; /* Para manter a sobreposição arredondada */
+  background-color: #bc9eac9d;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 55%;
+  z-index: 1;
+  pointer-events: none; /* Permite clicar nos elementos abaixo */
 }
 
 /* Exibir a sobreposição rosa e o ícone do LinkedIn no hover */
 .image-wrapper:hover::after {
-  opacity: 1; /* Exibe a sobreposição ao passar o mouse */
+  opacity: 1;
 }
 
 /* Ícone do LinkedIn */
@@ -269,11 +270,6 @@ nav {
 /* Exibir o logo do LinkedIn no hover */
 .image-wrapper:hover .linkedin-link {
   opacity: 1;
-}
-.img-lk {
-  position: absolute;
-  width: 200px;
-  height: 200px;
 }
 
 .container-f {
