@@ -40,6 +40,11 @@ nav {
 .logo img {
   height: 45px; /* Ajuste o tamanho da logo conforme necessário */
 }
+.logo img:hover {
+  filter: brightness(1.4);
+  
+  transition: all 0.5s ease;
+}
 .img-home {
   position: absolute;
   top: -40px;
@@ -113,11 +118,14 @@ nav {
 }
 .sobre-img {
   position: absolute;
-  top: -90px;
+  bottom: -10px;
 }
 
 .sobre h1 {
   font-size: 60px;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 500;
+  color: #5A233E;
 }
 .sobre p{
   font-size: 24px;
@@ -125,17 +133,28 @@ nav {
 .quem-somos {
   display: grid;
   grid-column: 2;
-  gap: 4rem;
+  gap: 5rem;
 }
 .pipoca-agil {
+  text-align: justify;
   margin: 0;
   display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-column: 1;
+  gap: 1.5rem;
   background-color: #5A233E;
-  justify-content: end;
+  justify-content: right;
   font-family: "IBM Plex Sans", sans-serif;
   color: #F0F0F0;
   font-size: 20px;
-  padding: 2rem;
+  padding: 2rem 10.7rem;
+}
+.pipoca-agil h1 {
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+.pipoca-agil h2{
+  display: none;
 }
 
 .time-img {

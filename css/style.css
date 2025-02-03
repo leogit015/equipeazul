@@ -1,6 +1,6 @@
 /* Estilo para o body */
 body {
-  background: linear-gradient(#E9DEE3 0%, #BC9EAC);
+  background: linear-gradient(#dfdcde 0%, #BC9EAC 23%);
   overflow-x: hidden;
 }
 
@@ -13,7 +13,7 @@ body {
 
 /* Estilo para o header e a navegação */
 header {
-  background-color: #bc9eac9f;
+  background-color: #a88395a3;
   padding: 20px 60px;
 }
 
@@ -146,10 +146,6 @@ span {
   color: #5A233E;
   font-weight: 500;
 }
-.busque-ajuda {
-  background: linear-gradient(#deced6, #BC9EAC);
-}
-
 .tel {
   display: flex;
   align-items: center;
