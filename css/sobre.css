@@ -257,6 +257,7 @@ nav {
   width: 200px;
   height: 200px;
   opacity: 0; /* Esconde o ícone inicialmente */
+  filter: opacity(75%);
   transition: opacity 0.3s ease-in-out;
 }
 
