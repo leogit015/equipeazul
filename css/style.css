@@ -353,9 +353,9 @@ span {
   padding: 7.03rem 10px;
   text-align: center;
   font-size: 24px;
-  font-weight: 400;
+  font-weight: 600;
   text-align: center;
-  white-space: normal; /* Permite quebra de linha */
+  white-space:  normal; /* Permite quebra de linha */
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease, transform 0.3s ease;
